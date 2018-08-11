@@ -1,2 +1,5 @@
 ﻿  test.cpp
+d:\sample\interviewcode\leetcode\46.h(35): warning C4018: “<”: 有符号/无符号不匹配
+d:\sample\interviewcode\testproject\testproject\test.cpp(16): warning C4018: “<”: 有符号/无符号不匹配
+d:\sample\interviewcode\testproject\testproject\test.cpp(17): warning C4018: “<”: 有符号/无符号不匹配
   TestProject.vcxproj -> D:\sample\InterviewCode\TestProject\Debug\TestProject.exe
