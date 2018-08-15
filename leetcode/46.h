@@ -1,27 +1,23 @@
-#pragma once
-#include <iostream>
-using namespace std;
-#include <vector>
-#include <set>
-
 class Solution {
 public:
-    void backtrack(set<int> s, vector<int> per, vector<vector<int>>& res){
+    void backtrack(set<int>& s, vector<int> per, vector<vector<int>>& res){
         
-        if(s.empty()){
+        if(per.size() == s.size()){
             res.push_back(per);
             return;
         }
         
         for(auto it = s.begin();it!= s.end();it++){
             int a = *it;
-            per.push_back(*it);
-            s.erase(a);
-        
-            backtrack(s, per, res);
             
-            per.pop_back();
-            s.insert(a);
+            auto itt = find(per.begin(),per.end(),a);
+            if(itt == per.end()){
+                per.push_back(a);  
+                backtrack(s, per, res);
+                per.pop_back();
+            }
+
+
         }
         
         return;
